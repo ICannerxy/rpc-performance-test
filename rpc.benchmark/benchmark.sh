@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+java -Xms512m -Xmx512m -Xmn128m -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.log -Djava.ext.dirs="./lib:./ext:$JAVA_HOME/jre/lib/ext" com.opensource.rpc.benchmark.RpcBenchmarkClient $@

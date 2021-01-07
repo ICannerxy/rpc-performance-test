@@ -1,0 +1,34 @@
+/**
+ * Alipay.com Inc.
+ * Copyright (c) 2004-2020 All Rights Reserved.
+ */
+package com.demo.rpc.benchmark.util;
+
+import org.apache.commons.lang3.RandomStringUtils;
+
+/**
+ *
+ * @author xingqi
+ * @version $Id: Strings.java, v 0.1 2020年05月09日 5:38 PM xingqi Exp $
+ */
+public class Strings {
+
+    private static char[] chars = new char[] {
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+            'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+            'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D',
+            'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+            'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+            'Y', 'Z',
+    };
+
+    public static String randomString(int len) {
+        return RandomStringUtils.random(len, 0, chars.length, true, true, chars);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(randomString(1024));
+    }
+
+}
